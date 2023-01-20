@@ -1,0 +1,40 @@
+@use 'mixins' as *;
+
+// Text sizes on different breakpoints
+$h1-400: 2rem;
+$h1-500: 3rem;
+
+$h2-400: 1.6rem;
+$h2-500: 2.5rem;
+
+$h3-400: 1.4rem;
+$h3-500: 1.6rem;
+
+$p-400: 1rem;
+$p-500: 1.1rem;
+
+h1 {
+    font-size: $h1-400;
+    text-transform: uppercase;
+
+    @include respondTo(desktop) {
+        font-size: $h1-500;
+    }
+}
+
+h2 {
+    font-size: $h2-400;
+    text-transform: uppercase;
+
+    @include respondTo(desktop) {
+        font-size: $h2-500;
+    }
+}
+
+p {
+    font-size: $p-400;
+
+    @include respondTo(desktop) {
+        font-size: $p-500;
+    }
+}
