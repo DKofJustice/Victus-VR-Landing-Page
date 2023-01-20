@@ -1,3 +1,47 @@
+@use './../Abstracts/colors' as *;
+@use './../Abstracts/mixins' as *;
+
 header {
-    width: 100%;
+    position: fixed;
+    width: 16rem;
+    height: 100%;
+    left: -16rem;
+    opacity: 0;
+    background-color: $neutral-color;
+    transition: all 0.2s ease-in-out;
+
+    @include respondTo(tablet) {
+        width: 100%;
+        height: 8rem;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.header-showing {
+    left: 0;
+    opacity: 1;
+}
+
+img[alt="ham-button"] {
+    display: initial;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 17rem;
+    top: 1rem;
+    cursor: pointer;
+
+    @include respondTo(tablet) {
+        display: none;
+    }
+}
+
+.header-content {
+    @include flex(column, flex-start, flex-start);
+    padding-inline: 3rem;
+
+    @include respondTo(tablet) {
+        @include flex(row, flex-start, center);
+    }
 }
