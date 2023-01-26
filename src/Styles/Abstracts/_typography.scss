@@ -16,6 +16,7 @@ $p-500: 1.1rem;
 h1 {
     font-size: $h1-400;
     text-transform: uppercase;
+    font-family: 'Inria Sans', sans-serif;
 
     @include respondTo(desktop) {
         font-size: $h1-500;
@@ -25,6 +26,7 @@ h1 {
 h2 {
     font-size: $h2-400;
     text-transform: uppercase;
+    font-family: 'Inria Sans', sans-serif;
 
     @include respondTo(desktop) {
         font-size: $h2-500;
@@ -33,6 +35,7 @@ h2 {
 
 p {
     font-size: $p-400;
+    font-family: 'Roboto';
 
     @include respondTo(desktop) {
         font-size: $p-500;
