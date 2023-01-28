@@ -15,9 +15,7 @@ export default function About() {
             </div>
 
             <div className='about-right'>
-                <div className='glasses-inner'>
-                    <img src={GlassesInner} alt="glasses-inner" />
-                </div>
+                <img src={GlassesInner} alt="glasses-inner" />
             </div>
         </div>
     </div>
