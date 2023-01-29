@@ -1,0 +1,23 @@
+@use './../Abstracts/colors' as *;
+@use './../Abstracts/mixins' as *;
+
+.features {
+    width: 100%;
+}
+
+.features-content {
+    width: fit-content;
+    margin-inline: auto;
+    @include flex(column, center, flex-start);
+    padding-block: 8rem;
+    padding-inline: 3rem;
+
+    .features-nav {
+        @include flex(row, flex-start, center);
+
+        .feature-tab {
+            color: $neutral-color;
+            font-size: 1.4rem;
+        }
+    }
+}

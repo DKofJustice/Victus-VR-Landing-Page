@@ -24,11 +24,8 @@
         padding-bottom: 3rem;
         border-bottom: 4px solid $white;
 
-        h2, p {
-            color: $white;
-        }
-
         h2 {
+            color: $white;
             
             @include respondTo(desktop) {
                 max-width: 25rem;
@@ -36,6 +33,7 @@
         }
 
         p {
+            color: $neutral-color;
             max-width: 25rem;
             line-height: 1.7rem;
         }
