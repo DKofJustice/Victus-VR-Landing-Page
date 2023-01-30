@@ -517,26 +517,103 @@ img[alt=corner-lines-right] {
 }
 
 .features-content {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  max-width: 100rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-block: 8rem;
+  padding-block: 10rem;
   padding-inline: 3rem;
 }
 .features-content .features-nav {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  border-bottom: 1px solid #2D2D2D;
+  overflow-x: scroll;
+}
+.features-content .features-nav::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .features-content .features-nav {
+    overflow-x: initial;
+  }
 }
 .features-content .features-nav .feature-tab {
+  padding-right: 2rem;
+  padding-block: 1rem;
+  margin-left: 3rem;
   color: #797979;
-  font-size: 1.4rem;
+  border-bottom: 10px solid transparent;
+  font-size: 1.5rem;
+  font-family: "Roboto";
+  font-weight: 700;
+  cursor: pointer;
+}
+.features-content .feature-tab:first-child {
+  margin-left: 0;
+}
+.features-content .feature-section {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #2D2D2D;
+}
+@media (min-width: 1024px) {
+  .features-content .feature-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.features-content .feature-section .feature-image {
+  margin-inline: -3rem;
+}
+@media (min-width: 1024px) {
+  .features-content .feature-section .feature-image {
+    margin-inline: 0;
+  }
+}
+.features-content .feature-section .feature-image img {
+  width: 100%;
+  min-width: 20rem;
+  height: auto;
+}
+.features-content .feature-section p {
+  width: 26rem;
+  color: #797979;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  padding-left: 6rem;
+  padding-bottom: 6rem;
+}
+.features-content .feature-section .feature-text-mobile {
+  display: initial;
+  padding-left: 0;
+}
+@media (min-width: 1024px) {
+  .features-content .feature-section .feature-text-mobile {
+    display: none;
+  }
+}
+.features-content .feature-section .feature-text-desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .features-content .feature-section .feature-text-desktop {
+    display: initial;
+  }
 }
 
 * {

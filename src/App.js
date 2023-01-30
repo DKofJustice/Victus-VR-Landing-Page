@@ -2,6 +2,7 @@ import About from './Components/About';
 import Features from './Components/Features';
 import Header from './Components/Header';
 import Landing from './Components/Landing';
+import Reviews from './Components/Reviews';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Landing/>
         <About/>
         <Features/>
+        <Reviews/>
       </div>
     </div>
   );

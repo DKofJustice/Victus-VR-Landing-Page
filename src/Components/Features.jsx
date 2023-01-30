@@ -12,9 +12,10 @@ export default function Features() {
             </nav>
 
             <div className='feature-section'>
+                <p className='feature-text-mobile'>{featuresList[0].text}</p>
                 <div className='feature-image'><img src={featuresList[0].image} alt="feature" /></div>
 
-                <p>{featuresList[0].text}</p>
+                <p className='feature-text-desktop'>{featuresList[0].text}</p>
             </div>
         </div>
     </div>
