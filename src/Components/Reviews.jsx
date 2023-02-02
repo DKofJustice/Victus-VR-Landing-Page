@@ -8,22 +8,15 @@ export default function Reviews() {
 
   return (
     <div className='reviews'>
-        <div>
+        <div className='oculus-set'>
             <img src={OculusSet} alt="oculus-set" />
         </div>
 
         <div className='reviews-content'>
-            <div className='reviews'>
+            <div className='reviews-windows'>
                 {names.map(name => {
                     return <ReviewBox name={name} />
                 })}
-            </div>
-
-            <div className='review-title-text'>
-                <h2>User Reviews</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat bibendum sem, id eleifend diam condimentum eget. Nunc elit magna, pretium at dui in, maximus laoreet ex.</p>
-
             </div>
         </div>
     </div>

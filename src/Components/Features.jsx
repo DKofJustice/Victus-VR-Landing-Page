@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import featuresList from './featuresList';
 
 export default function Features() {
+
   return (
     <div className='features'>
         <div className='features-content'>
