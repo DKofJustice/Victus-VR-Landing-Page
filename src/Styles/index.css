@@ -621,6 +621,11 @@ img[alt=corner-lines-right] {
   background-color: #000000;
   padding-block: 10rem;
 }
+@media (min-width: 1024px) {
+  .reviews {
+    padding-block: 20rem;
+  }
+}
 .reviews .oculus-set {
   position: absolute;
   width: 100%;
@@ -665,6 +670,11 @@ img[alt=corner-lines-right] {
   background-color: #0F0E0E;
   -webkit-clip-path: polygon(84% 0, 100% 17%, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(84% 0, 100% 17%, 100% 100%, 0 100%, 0 0);
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+.reviews .reviews-content .reviews-windows .review-box:hover {
+  transform: scale(1.1);
 }
 .reviews .reviews-content .reviews-windows .review-box .review-box-content {
   display: flex;
@@ -686,6 +696,244 @@ img[alt=corner-lines-right] {
   height: 10px;
   background-color: #FFFFFF;
   transform: translateX(-2rem) rotate(45deg);
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.products .products-content {
+  padding-block: 10rem;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (min-width: 1024px) {
+  .products .products-content {
+    padding-inline: 10rem;
+  }
+}
+.products .products-content h2 {
+  opacity: 0;
+  transform: translateY(2rem);
+  color: #FFFFFF;
+  margin-left: 3rem;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .products .products-content h2 {
+    margin-left: 0;
+  }
+}
+.products .products-content .product-title-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+.products .products-content .product-list {
+  opacity: 0;
+  transform: translateY(2rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 10rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  row-gap: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .products .products-content .product-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 3rem;
+  }
+}
+.products .products-content .product-list .product-box {
+  background-color: #6C88EC;
+  width: 11rem;
+  height: 25rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .products .products-content .product-list .product-box {
+    width: 15rem;
+  }
+}
+.products .products-content .product-list .product-box .product-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+}
+.products .products-content .product-list .product-box .product-image-container img {
+  width: 10rem;
+  height: auto;
+}
+.products .products-content .product-list .product-box .product-image-container img[class*="Victus VR Controller"] {
+  width: 5rem;
+  height: auto;
+}
+.products .products-content .product-list .product-box p {
+  color: #FFFFFF;
+  font-family: "Inria Sans";
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.products .products-content .product-list .product-box .product-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .products .products-content .product-list .product-box .product-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.products .products-content .product-list .product-box .product-buttons button {
+  border: none;
+  border-radius: 10px;
+  font-family: "Inria Sans";
+  font-weight: 600;
+  padding-inline: 1rem;
+  padding-block: 0.3rem;
+  cursor: pointer;
+}
+.products .products-content .product-list .product-box .product-buttons .buy-now {
+  background-color: #FFFFFF;
+  color: #6C88EC;
+}
+.products .products-content .product-list .product-box .product-buttons .learn-more {
+  background: none;
+  color: #FFFFFF;
+}
+.products .products-content .product-content-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  width: 100%;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+footer .footer-art-1 {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  footer .footer-art-1 {
+    transform: translateX(-20rem) translateY(-10rem);
+  }
+}
+footer .footer-art-1 .circle-1 {
+  background: rgba(178, 204, 74, 0.4);
+  filter: blur(50px);
+  width: 349px;
+  height: 349px;
+  border-radius: 50%;
+}
+footer .footer-art-1 .circle-2 {
+  background: linear-gradient(273.88deg, rgba(68, 148, 133, 0.67) -3.56%, rgba(48, 182, 201, 0.43) 75.96%);
+  filter: blur(50px);
+  width: 349px;
+  height: 349px;
+  border-radius: 50%;
+  transform: translateX(-4rem) translateY(10rem);
+}
+footer .footer-art-2 {
+  position: absolute;
+  left: 80%;
+  top: 60%;
+}
+footer .footer-art-2 .white-circle {
+  width: 914px;
+  height: 914px;
+  border-radius: 50%;
+  border: 3px solid #575757;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  padding-block: 10rem;
+  padding-inline: 3rem;
+  row-gap: 6rem;
+  position: relative;
+  z-index: 2000;
+}
+@media (min-width: 1024px) {
+  footer .footer-content {
+    padding-block: 20rem;
+  }
+}
+footer .footer-content .logo-white {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+footer .footer-content .footer-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  row-gap: 5rem;
+}
+footer .footer-content .footer-menu div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 2rem;
+}
+footer .footer-content .footer-menu .contact {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer .footer-content .footer-menu p {
+  cursor: pointer;
 }
 
 * {

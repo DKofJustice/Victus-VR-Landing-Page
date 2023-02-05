@@ -6,6 +6,10 @@
     background-color: $black;
     padding-block: 10rem;
 
+    @include respondTo(desktop) {
+        padding-block: 20rem;
+    }
+
     .oculus-set {
         position: absolute;
         width: 100%;
@@ -40,6 +44,12 @@
             .review-box {
                 background-color: $background-color;
                 clip-path: polygon(84% 0, 100% 17%, 100% 100%, 0 100%, 0 0);
+                transform: scale(1);
+                transition: transform 0.2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
 
                 .review-box-content {
                     @include flex(column, center, flex-start);

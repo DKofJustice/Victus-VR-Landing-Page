@@ -1,0 +1,119 @@
+@use './../Abstracts/colors' as *;
+@use './../Abstracts/mixins' as *;
+
+.products {
+    width: 100%;
+    @include flex(column, center, center);
+
+    .products-content {
+        padding-block: 10rem;
+        padding-inline: 1rem;
+        @include flex(column, center, flex-start);
+
+        @include respondTo(desktop) {
+            padding-inline: 10rem;
+        }
+        
+        h2 {
+            opacity: 0;
+            transform: translateY(2rem);
+            color: $white;
+            margin-left: 3rem;
+            transition: all 0.2s ease-in-out;
+
+            @include respondTo(desktop) {
+                margin-left: 0
+            }
+        }
+
+        .product-title-anim {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-list {
+            opacity: 0;
+            transform: translateY(2rem);
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+            padding-top: 10rem;
+            column-gap: 0.5rem;
+            row-gap: 1rem;
+            transition: all 0.2s ease-in-out;
+
+            @include respondTo(desktop) {
+                @include flex(row, flex-start, center);
+                column-gap: 3rem;
+                row-gap: 3rem;
+            }
+
+            .product-box {
+                background-color: #6C88EC;
+                width: 11rem;
+                height: 25rem;
+                border-radius: 20px;
+                @include flex(column, flex-start, center);
+
+                @include respondTo(desktop) {
+                    width: 15rem;
+                }
+
+                .product-image-container {
+                    @include flex(column, center, center);
+                    height: 12rem;
+
+                    img {
+                        width: 10rem;
+                        height: auto;
+                    }
+
+                    img[class*='Victus VR Controller'] {
+                        width: 5rem;
+                        height: auto;
+                    }
+                }
+
+                p {
+                    color: $white;
+                    font-family: "Inria Sans";
+                    font-weight: 600;
+                    margin-bottom: 3rem;
+                }
+
+                .product-buttons {
+                    @include flex(column, center, center);
+                    column-gap: 0.5rem;
+
+                    @include respondTo(desktop) {
+                        @include flex(row, center, center);
+                    }
+
+                    button {
+                        border: none;
+                        border-radius: 10px;
+                        font-family: "Inria Sans";
+                        font-weight: 600;
+                        padding-inline: 1rem;
+                        padding-block: 0.3rem;
+                        cursor: pointer;
+                    }
+
+                    .buy-now {
+                        background-color: $white;
+                        color: #6C88EC;
+                    }
+
+                    .learn-more {
+                        background: none;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .product-content-anim {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

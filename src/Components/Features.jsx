@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import featuresList from './featuresList';
 
 export default function Features() {

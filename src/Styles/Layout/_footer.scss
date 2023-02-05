@@ -1,0 +1,92 @@
+@use './../Abstracts/colors' as *;
+@use './../Abstracts/mixins' as *;
+
+footer {
+    width: 100%;
+    background-color: $black;
+    color: $white;
+    @include flex(column, center, center);
+    position: relative;
+    overflow: hidden;
+
+    .footer-art-1 {
+        position: absolute;
+        z-index: 1000;
+        @include flex(row, center, center);
+
+        @include respondTo(desktop) {
+            transform: translateX(-20rem) translateY(-10rem);
+        }
+
+        .circle-1 {
+            background: rgba(178, 204, 74, 0.4);
+            filter: blur(50px);
+            width: 349px;
+            height: 349px;
+            border-radius: 50%;
+        }
+        
+        .circle-2 {
+            background: linear-gradient(273.88deg, rgba(68, 148, 133, 0.67) -3.56%, rgba(48, 182, 201, 0.43) 75.96%);
+            filter: blur(50px);
+            width: 349px;
+            height: 349px;
+            border-radius: 50%;
+            transform: translateX(-4rem) translateY(10rem);
+        }
+    }
+
+    .footer-art-2 {
+        position: absolute;
+        left: 80%;
+        top: 60%;
+
+        .white-circle {
+            width: 914px;
+            height: 914px;
+            border-radius: 50%;
+            border: 3px solid #575757;
+        }
+    }
+
+    .footer-content {
+        @include flex(column, center, flex-start);
+        width: 80%;
+        padding-block: 10rem;
+        padding-inline: 3rem;
+        row-gap: 6rem;
+        position: relative;
+        z-index: 2000;
+        
+        @include respondTo(desktop) {
+            padding-block: 20rem;
+        }
+
+        .logo-white {
+            @include flex(row, flex-start, center);
+            column-gap: 1rem;
+        }
+
+        .footer-menu {
+            @include flex(row, flex-start, center);
+            width: 100%;
+            flex-wrap: wrap;
+            column-gap: 4rem;
+            row-gap: 5rem;
+
+            div {
+                width: 30%;
+                @include flex(column, center, flex-start);
+                row-gap: 2rem;
+            }
+
+            .contact {
+                width: fit-content;
+            }
+
+            p {
+                cursor: pointer;
+            }
+        }
+    }
+}

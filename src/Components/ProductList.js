@@ -1,29 +1,25 @@
-const featuresList = [
+const productList = [
     {
-        title: 'Graphics',
-        image: require('./../Assets/Graphics Image.jpg'),
-        text: 'With 1832x1920 pixels per eye, VR apps such video streaming, games or work will look stunning'
+        image: require('./../Assets/286550512_1167176070795542_1941393908346579466_n 1-min.png'),
+        title: 'Victus Carrying Case',
+        price: '$39.99 USD'
     },
     {
-        title: 'Controls',
-        image: require('./../Assets/VR Controller-min.jpg'),
-        text: 'Play as if you are part of the experience with Touch Controls'
+        image: require('./../Assets/USB-Type-C-Cable-Download-Transparent-PNG-Image 1-min.png'),
+        title: 'Victus USB-C Charging Cable',
+        price: '$9.99 USD'
     },
     {
-        title: 'Processor',
-        image: require('./../Assets/VR Controller-min.jpg'),
-        text: 'The AMD Ryzen 5 processor runs the device, with 4.2 Ghz speed that allows for seamless experience'
+        image: require('./../Assets/[CITYPNG 1-min.png'),
+        title: 'Victus Controller',
+        price: '$49.99 USD'
     },
     {
-        title: 'Play Area',
-        image: require('./../Assets/Play Area-min.jpg'),
-        text: 'Setup a play area when using the VR headset in a new space, so to not worry about hiting any object around'
+        image: require('./../Assets/kisspng-htc-vive-playstation-vr-head-mounted-display-oculu-vive-controller-accessories-5b45845e0bdee2 1-min.png'),
+        title: 'Victus VR Controller',
+        price: '$49.99 USD'
     },
-    {
-        title: 'Sound',
-        image: require('./../Assets/nearfield-surround-sound-min.jpg'),
-        text: 'The 7.1 Surround Sound will give the impression that you are in that world, with spatial sounds'
-    }
+    
 ];
 
-module.exports = featuresList;
+module.exports = productList;
