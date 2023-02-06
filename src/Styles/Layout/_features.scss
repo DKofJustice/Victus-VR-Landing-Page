@@ -33,11 +33,16 @@
             padding-block: 1rem;
             margin-left: 3rem;
             color: $neutral-color;
-            border-bottom: 10px solid $blue;
+            border-bottom: 10px solid transparent;
             font-size: 1.5rem;
             font-family: 'Roboto';
             font-weight: 700;
             cursor: pointer;
+            transition: border-bottom 0.2s ease-in-out;
+        }
+
+        .active-tab {
+            border-bottom: 10px solid $blue;
         }
     }
 
@@ -57,15 +62,25 @@
 
         .feature-image {
             margin-inline: -3rem;
+            min-width: 30rem;
+            max-width: 60rem;
+            height: auto;
+            max-height: 25rem;
+            overflow: hidden;
 
             @include respondTo(desktop) {
                 margin-inline: 0;
+                max-height: 32rem;
             }
 
             img {
                 width: 100%;
-                min-width: 20rem;
-                height: auto;
+                opacity: 0;
+            }
+              
+            .image-fade-in {
+                opacity: 1;
+                transition: opacity 0.1s ease-in-out;
             }
         }
 
@@ -74,7 +89,6 @@
             color: $neutral-color;
             font-family: 'Roboto';
             font-weight: 400;
-            font-size: 1.5rem;
             line-height: 1.7;
             padding-left: 6rem;
             padding-bottom: 6rem;

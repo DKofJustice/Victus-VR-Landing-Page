@@ -4,7 +4,20 @@ import ReviewBox from './ReviewBox';
 
 export default function Reviews() {
 
-    const names = ['Jeremy', 'Mike', 'Anna'];
+    const names = [
+        {
+            id: 0,
+            name: 'Jeremy'
+        },
+        {
+            id: 1,
+            name: 'Mike'
+        },
+        {
+            id: 2, 
+            name: 'Anna'
+        }
+    ];
 
   return (
     <div className='reviews'>
@@ -15,7 +28,7 @@ export default function Reviews() {
         <div className='reviews-content'>
             <div className='reviews-windows'>
                 {names.map(name => {
-                    return <ReviewBox name={name} />
+                    return <ReviewBox id={names.id} name={names.name} />
                 })}
             </div>
         </div>

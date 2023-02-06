@@ -6,6 +6,15 @@ import LandingButton from './../Assets/material-symbols_shopping-bag-outline.png
 import DownArrow from './../Assets/material-symbols_arrow-back-ios.png';
 
 export default function Landing() {
+
+  const handleClickScroll = () => {
+    const element = document.getElementById('about');
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className='landing'>
         <div className='sphere-content'></div>
@@ -28,7 +37,7 @@ export default function Landing() {
             <img src={LandingButton} alt="landing-button" />
           </button>
 
-          <img src={DownArrow} alt="down-arrow" />
+          <img src={DownArrow} onClick={handleClickScroll} alt="down-arrow" />
         </div>
     </section>
   )

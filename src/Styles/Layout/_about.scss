@@ -11,6 +11,7 @@
 
     @include respondTo(desktop) {
         column-gap: 6rem;
+        padding-block: 10rem;
     }
 
     @include respondTo(desktop-large) {

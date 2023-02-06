@@ -43,6 +43,7 @@ export default function Products() {
             ref={productContent} >
                 {productList.map(product => {
                     return <ProductBox 
+                    id={product.id}
                     image={product.image}
                     title={product.title}
                     price={product.price}

@@ -452,6 +452,7 @@ img[alt=corner-lines-right] {
   .about-content {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
+    padding-block: 10rem;
   }
 }
 @media (min-width: 1450px) {
@@ -549,11 +550,15 @@ img[alt=corner-lines-right] {
   padding-block: 1rem;
   margin-left: 3rem;
   color: #797979;
-  border-bottom: 10px solid #683DE3;
+  border-bottom: 10px solid transparent;
   font-size: 1.5rem;
   font-family: "Roboto";
   font-weight: 700;
   cursor: pointer;
+  transition: border-bottom 0.2s ease-in-out;
+}
+.features-content .features-nav .active-tab {
+  border-bottom: 10px solid #683DE3;
 }
 .features-content .feature-tab:first-child {
   margin-left: 0;
@@ -577,23 +582,31 @@ img[alt=corner-lines-right] {
 }
 .features-content .feature-section .feature-image {
   margin-inline: -3rem;
+  min-width: 30rem;
+  max-width: 60rem;
+  height: auto;
+  max-height: 25rem;
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   .features-content .feature-section .feature-image {
     margin-inline: 0;
+    max-height: 32rem;
   }
 }
 .features-content .feature-section .feature-image img {
   width: 100%;
-  min-width: 20rem;
-  height: auto;
+  opacity: 0;
+}
+.features-content .feature-section .feature-image .image-fade-in {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
 }
 .features-content .feature-section p {
   width: 26rem;
   color: #797979;
   font-family: "Roboto";
   font-weight: 400;
-  font-size: 1.5rem;
   line-height: 1.7;
   padding-left: 6rem;
   padding-bottom: 6rem;

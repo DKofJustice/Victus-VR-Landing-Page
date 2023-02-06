@@ -1,12 +1,33 @@
 import React from 'react';
 import BlueStar from './../Assets/Star 3-min.png';
 
-export default function ReviewBox({ name }) {
+export default function ReviewBox({ id, name }) {
 
-    const imageCount = [1, 2, 3, 4, 5];
+    const imageCount = [
+        {
+            id: 0,
+            imageID: 1
+        },
+        {
+            id: 1,
+            imageID: 2
+        },
+        {
+            id: 2,
+            imageID: 3
+        },
+        {
+            id: 3,
+            imageID: 4
+        },
+        {
+            id: 4,
+            imageID: 5
+        },
+    ];
 
   return (
-    <div className='review-box'>
+    <div key={id} className='review-box'>
         <div className='review-box-content'>
             <p className='name'>{name}</p>
 
@@ -14,7 +35,7 @@ export default function ReviewBox({ name }) {
 
             <div className='star-rating'>
                 {imageCount.map(image => {
-                    return <img src={BlueStar} alt="" />
+                    return <img key={image.id} src={BlueStar} alt="" />
                 })}
             </div>
         </div>
