@@ -68,7 +68,6 @@ img[alt="hide-header"] {
         margin-inline: auto;
         @include flex(row, flex-start, center);
         padding-inline: 3rem;
-        padding-top: 0;
         padding-block: 2rem;
     }
 
